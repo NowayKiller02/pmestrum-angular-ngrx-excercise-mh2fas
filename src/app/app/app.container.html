@@ -1,4 +1,8 @@
-<!--<app-header [sizeSelection]="selectedSize$ | async"></app-header>-->
+<app-header [sizeSelection]="sandbox.selectedCount$ | async"></app-header>
 <div class="persons-container">
-  <app-person [person]="person" *ngFor="let person of (persons$ | async).data; trackBy: trackByFn"></app-person>
+  <app-person
+    [person]="person"
+    (toggleSelected)="toggleSelected(person)"
+    *ngFor="let person of (sandbox.persons$ | async); trackBy: trackByFn"
+  ></app-person>
 </div>

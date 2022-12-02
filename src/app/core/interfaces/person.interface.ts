@@ -1,3 +1,7 @@
+export interface SelectablePerson extends Person{
+  selected: boolean;
+}
+
 export interface Person {
   'id': number;
   'email': string;

@@ -1,14 +1,13 @@
-import { Person } from "./person.interface";
+import { Person, SelectablePerson } from "./person.interface";
 
-/*
-  create global state containing personState
- */
+
 export interface State{
   person: PersonState;
 }
 
 export interface PersonState{
-  data: Person[];
+  data: SelectablePerson[];
+  selectedCount: number;
   loading: boolean;
   loaded: boolean;
   failed: boolean;
